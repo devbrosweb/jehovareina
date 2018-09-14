@@ -13,18 +13,18 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         factory(User::class)->create([
-          'name' => 'Joe Doe',
-          'email' => 'joedoe@gmail.com',
+          'name' => 'Carlos Pineda',
+          'email' => 'carlos@gmail.com',
           'password' => bcrypt('1234')
         ]);
         factory(User::class)->create([
-          'name' => 'Jane Doe',
-          'email' => 'janedoe@gmail.com',
+          'name' => 'Orlando Melo',
+          'email' => 'orlando@gmail.com',
           'password' => bcrypt('1234')
         ]);
         factory(User::class)->create([
-          'name' => 'Jam Doe',
-          'email' => 'jamdoe@gmail.com',
+          'name' => 'Mariana Almanzar',
+          'email' => 'mariana@gmail.com',
           'password' => bcrypt('1234')
         ]);
     }

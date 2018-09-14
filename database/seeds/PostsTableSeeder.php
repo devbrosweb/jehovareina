@@ -15,11 +15,11 @@ class PostsTableSeeder extends Seeder
     {
 
       //genarate 10 dummy data
-        for ($i=0; $i < 10 ; $i++) {
+        for ($i=1; $i <= 10 ; $i++) {
           $date   = date('Y-m-d H:i:s', strtotime("2018-09-05 18:00:00 +{$i} days"));
           $image  = 'post_image_'.$i.'.jpg';
           factory(Post::class)->create([
-            'image' => $image,
+            'image' => rand(0,1) == 1 ? $image : null,
             'created_at' => $date,
             'updated_at' => $date
 

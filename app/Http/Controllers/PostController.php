@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    protected $limit = 3;
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+      $posts = Post::latest()->paginate($this->limit);
+        return View('blog.index', compact('posts'));
     }
 
     /**
@@ -46,7 +48,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+
     }
 
     /**
