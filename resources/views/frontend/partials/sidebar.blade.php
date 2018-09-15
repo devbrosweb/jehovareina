@@ -17,7 +17,7 @@
           <ul class="widget-categories">
             @foreach ($categories as $category)
                 <li>
-                  <a href="{{ route('blog.category', $category) }}">
+                  <a href="{{ route('blog.category', $category->slug) }}">
                     <i class="fa fa-angle-double-right"></i> {{ $category->title }}
                     <span class="badge pull-right badge-pill badge-primary">{{ $category->posts->count() }}</span>
                 </a>

@@ -17,11 +17,6 @@ class PostController extends Controller
     public function index()
     {
 
-      //get all categories
-      $categories = Category::with(['posts' => function($query){
-          $query->published();
-      }])->orderBy('title', 'asc')->get();
-
       //get all posts
       $posts = Post::with('author')
                       ->latest()
@@ -30,20 +25,19 @@ class PostController extends Controller
         return View('blog.index', compact('posts', 'categories'));
     }
 
-    public function category($id)
+    public function category(Category $category)
     {
-
-      //get all categories
-      $categories = Category::with(['posts' => function($query){
-          $query->published();
-      }])->orderBy('title', 'asc')->get();
+      $categoryName = $category->title;
 
       //get all posts
-      $posts = Post::latest()
-                      ->published()
-                      ->where('category_id', $id)
-                      ->Paginate($this->limit);
-        return View('blog.index', compact('posts', 'categories'));
+      // \DB::enableQueryLog();
+      $posts = $category->posts()
+                        ->with('author')
+                        ->latest()
+                        ->published()
+                        ->paginate($this->limit);
+         return View('blog.index', compact('posts', 'categories', 'categoryName'));
+        // dd(\DB::getQueryLog());
     }
 
     /**
