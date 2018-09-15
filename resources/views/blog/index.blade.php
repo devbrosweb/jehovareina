@@ -21,7 +21,7 @@
 
         <div class="blog-detail">
             <div class="entry-title mb-10">
-                <a href="{{ asset(route('blog.show', $post))}}">{{ $post->title }}</a>
+                <a href="{{ asset(route('blog.show', $post)) }}">{{ $post->title }}</a>
             </div>
             <div class="entry-meta mb-10">
                 <ul>
@@ -36,7 +36,7 @@
             </div>
             <div class="entry-share clearfix">
                 <div class="entry-button">
-                    <a class="button arrow" href="#">Continuar Leyendo<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    <a class="button arrow" href="{{ asset(route('blog.show', $post)) }}">Continuar Leyendo<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                 </div>
                 <div class="social list-style-none float-right">
                     <strong>Share : </strong>
