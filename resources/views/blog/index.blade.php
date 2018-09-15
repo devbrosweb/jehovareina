@@ -26,7 +26,7 @@
             <div class="entry-meta mb-10">
                 <ul>
                   <li> <i class="fa fa-user-o"></i> <a href="#">{{ $post->author->name }}</a></li>
-                    <li> <i class="fa fa-folder-open-o"></i> <a href="#"> Design,</a> <a href="#"> HTML5 </a> </li>
+                    <li> <i class="fa fa-folder-open-o"></i> <a href="{{ route('blog.category', $post->category)}}"> {{ $post->category->title }} </li>
                     <li><a href="#"><i class="fa fa-comment-o"></i> 5</a></li>
                     <li><a href="#"><i class="fa fa-calendar-o"></i> {{ $post->date }}</a></li>
                 </ul>

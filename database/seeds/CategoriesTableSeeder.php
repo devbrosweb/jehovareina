@@ -21,16 +21,13 @@ class CategoriesTableSeeder extends Seeder
           'title' => 'Web Programming'
         ]);
         factory(App\Category::class)->create([
-          'title' => 'Web Design'
-        ]);
-        factory(App\Category::class)->create([
           'title' => 'Internet'
         ]);
         factory(App\Category::class)->create([
           'title' => 'Social Marketing'
         ]);
         factory(App\Category::class)->create([
-          'title' => 'Photograph y'
+          'title' => 'Photography'
         ]);
 
         //update the posts database

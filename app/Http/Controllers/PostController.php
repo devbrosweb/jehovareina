@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Category;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -15,10 +16,34 @@ class PostController extends Controller
      */
     public function index()
     {
-      $posts = Post::latest()
+
+      //get all categories
+      $categories = Category::with(['posts' => function($query){
+          $query->published();
+      }])->orderBy('title', 'asc')->get();
+
+      //get all posts
+      $posts = Post::with('author')
+                      ->latest()
                       ->published()
                       ->Paginate($this->limit);
-        return View('blog.index', compact('posts'));
+        return View('blog.index', compact('posts', 'categories'));
+    }
+
+    public function category($id)
+    {
+
+      //get all categories
+      $categories = Category::with(['posts' => function($query){
+          $query->published();
+      }])->orderBy('title', 'asc')->get();
+
+      //get all posts
+      $posts = Post::latest()
+                      ->published()
+                      ->where('category_id', $id)
+                      ->Paginate($this->limit);
+        return View('blog.index', compact('posts', 'categories'));
     }
 
     /**
