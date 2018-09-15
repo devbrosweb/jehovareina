@@ -16,23 +16,23 @@
 <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,500i,600,700,800,900|Poppins:200,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900">
 
 <!-- Plugins -->
-<link rel="stylesheet" type="text/css" href="/frontend/css/plugins-css.css" />
+<link rel="stylesheet" type="text/css" href="{{ asset('/frontend/css/plugins-css.css') }}" />
 
 <!-- Typography -->
-<link rel="stylesheet" type="text/css" href="/frontend/css/typography.css" />
+<link rel="stylesheet" type="text/css" href="{{ asset('/frontend/css/typography.css') }}" />
 
 <!-- Shortcodes -->
-<link rel="stylesheet" type="text/css" href="/frontend/css/shortcodes/shortcodes.css" />
+<link rel="stylesheet" type="text/css" href="{{ asset('/frontend/css/shortcodes/shortcodes.css') }}" />
 
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="/frontend/css/style.css" />
+<link rel="stylesheet" type="text/css" href="{{ asset('/frontend/css/style.css') }}" />
 
 <!-- Responsive -->
-<link rel="stylesheet" type="text/css" href="/frontend/css/responsive.css" />
+<link rel="stylesheet" type="text/css" href="{{ asset('/frontend/css/responsive.css') }}" />
 
 <!-- Style customizer -->
 <link rel="stylesheet" type="text/css" href="#" data-style="styles"/>
-<link rel="stylesheet" type="text/css" href="/frontend/css/style-customizer.css" />
+<link rel="stylesheet" type="text/css" href="{{ asset('/frontend/css/style-customizer.css') }}" />
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -62,8 +62,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 @include('frontend.partials.header')
 
 
-@yield('content')
+        @yield('content')
 
+
+
+<!--=================================
+action box- -->
+<section class="action-box theme-bg full-width">
+  <div class="container">
+    <div class="row">
+     <div class="col-lg-12 col-md-12">
+       <div class="action-box-text">
+        <h3><strong> Webster: </strong> The most powerful template ever on the market</h3>
+        <p>Create tailor-cut websites with the exclusive multi-purpose responsive template along with powerful features.</p>
+      </div>
+      <div class="action-box-button">
+        <a class="button button-border white" href="#">
+          <span>Purchase Now</span>
+          <i class="fa fa-download"></i>
+       </a>
+     </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!--=================================
+action box- -->
 
 @include('frontend.partials.footer')
 

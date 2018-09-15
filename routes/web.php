@@ -6,4 +6,4 @@ Route::get('/', function () {
 });
 
 Route::get('/blog', 'PostController@index')->name('blog.index');
-Route::get('/blog/{post}', 'PostController@show')->name('blog.show');
+Route::get('/blog/post/{post}', 'PostController@show')->name('blog.show');

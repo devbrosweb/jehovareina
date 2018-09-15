@@ -17,7 +17,7 @@ class PostController extends Controller
     {
       $posts = Post::latest()
                       ->published()
-                      ->paginate($this->limit);
+                      ->Paginate($this->limit);
         return View('blog.index', compact('posts'));
     }
 
@@ -50,7 +50,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-
+      return view('blog.show');
     }
 
     /**

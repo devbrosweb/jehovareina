@@ -36,7 +36,11 @@
         <!-- menu logo -->
         <ul class="menu-logo">
             <li>
-                <a href="index-01.html"><img id="logo_img" src="/frontend/images/logo.png" alt="logo"> </a>
+
+                {{--  CAMBIAR ESTE LINK --}}
+                <a href="{{ route('blog.index')}}">
+                  <h1 class="text-white">Jehova Reina</h1>
+                </a>
             </li>
         </ul>
         <!-- menu links -->
@@ -44,7 +48,7 @@
          <ul class="menu-links">
 
          <li>
-           <a href="#">Inicio</a>
+           <a href="{{ route('blog.index')}}">Inicio</a>
           </li>
 
             <li>
@@ -81,7 +85,8 @@
 <!--=================================
 page-title-->
 
-<section class="page-title bg-overlay-black-60 parallax" data-jarallax='{"speed": 0.6}' style="background-image: url(/frontend/images/bg/02.jpg);">
+<section class="page-title bg-overlay-black-60 parallax" data-jarallax='{"speed": 0.6}'
+ style="background-image: url({{ asset('/frontend/images/bg/02.jpg') }} )">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -91,7 +96,7 @@ page-title-->
         </div>
           <ul class="page-breadcrumb">
             <li><a href="#"><i class="fa fa-home"></i> Inicio</a> <i class="fa fa-angle-double-right"></i></li>
-            <li><a href="#">Blog</a> <i class="fa fa-angle-double-right"></i></li
+            <li><a href="#">Blog</a> </i></li
        </ul>
      </div>
    </div>
