@@ -7,7 +7,7 @@ $factory->define(App\Post::class, function (Faker $faker) {
       'title' => $faker->sentence(rand(15, 20)),
       'author_id' => (rand(1,3)),
       'excerpt' => $faker->text(rand(250, 300)),
-      'body' => $faker->paragraph(10),
+      'body' => $faker->paragraphs(rand(10, 15), true),
       'slug' => $faker->slug()
     ];
 });

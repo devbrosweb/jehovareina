@@ -32,7 +32,7 @@
                 </ul>
             </div>
             <div class="entry-content">
-                <p>{{ $post->excerpt }}</p>
+                {!! $post->excerpt_html !!}
             </div>
             <div class="entry-share clearfix">
                 <div class="entry-button">

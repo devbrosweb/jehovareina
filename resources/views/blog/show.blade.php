@@ -29,7 +29,7 @@
                   </ul>
               </div>
               <div class="entry-content">
-                  <p>{{ $post->body }}</p>
+                  {!! $post->body_html !!}
 
                   <div class="entry-share clearfix">
                         <div class="tags">
