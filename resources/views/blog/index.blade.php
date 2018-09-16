@@ -16,6 +16,11 @@
                    Categoria:  <strong>{{ $categoryName }}</strong>
                 </div>
               @endif
+              @if(isset($authorName))
+                <div class="alert alert-secondary">
+                   Autor:  <strong>{{ $authorName }}</strong>
+                </div>
+              @endif
               <!--=================================
                Post
                =================================-->
@@ -32,7 +37,7 @@
                     </div>
                     <div class="entry-meta mb-10">
                        <ul>
-                          <li> <i class="fa fa-user-o"></i> <a href="#">{{ $post->author->name }}</a></li>
+                          <li> <i class="fa fa-user-o"></i> <a href="{{ route('blog.author', $post->author->slug) }}">{{ $post->author->name }}</a></li>
                           <li>
                              <i class="fa fa-folder-open-o"></i>
                              <a href="{{ route('blog.category', $post->category->slug)}}">
@@ -50,7 +55,7 @@
                           <a class="button arrow" href="{{ asset(route('blog.show', $post->slug)) }}">Continuar Leyendo<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                        </div>
                        <div class="social list-style-none float-right">
-                          <strong>Share : </strong>
+                          <strong>Compartir : </strong>
                           <ul>
                              <li>
                                 <a href="#"> <i class="fa fa-facebook"></i> </a>
