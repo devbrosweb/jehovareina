@@ -15,7 +15,7 @@ NOTE: This file contains Team CSS.
 .team .team-info span { font-size: 14px; text-transform: uppercase;}
 .team .social-icons { text-align: center; display: inline-block; margin-top: 10px; } 
 .team .team-contact span { display: block; font-size: 14px; display: block; margin-bottom: 10px; }
-.team .team-contact span.call { font-size: 20px; line-height: 28px; font-weight: 600; margin: 10px 0; color: #84ba3f; }
+.team .team-contact span.call { font-size: 20px; line-height: 28px; font-weight: 600; margin: 10px 0; color: #ff5500; }
 .team .team-contact span i { padding-right: 5px; }
 
 /*team-hover*/
@@ -64,7 +64,7 @@ NOTE: This file contains Team CSS.
 /*team full border*/
 .team-round.full-border { padding: 10px; border:1px solid #eeeeee; }
 .team-round.full-border .team-contact span.call { font-size: 16px; line-height: 22px; font-weight: normal; color: #363636; }
-.team-round.full-border .team-contact span.email { font-size: 17px; color: #84ba3f; }
+.team-round.full-border .team-contact span.email { font-size: 17px; color: #ff5500; }
 .team-round.full-border .team-description { padding-bottom: 0; }
 
 /*team list*/

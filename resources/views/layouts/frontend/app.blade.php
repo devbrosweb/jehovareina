@@ -59,7 +59,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!--=================================
  preloader -->
 
-@include('frontend.partials.header')
+@include('layouts.frontend.partials.header')
 
 
         @yield('content')
@@ -90,7 +90,7 @@ action box- -->
 <!--=================================
 action box- -->
 
-@include('frontend.partials.footer')
+@include('layouts.frontend.partials.footer')
 
 <div id="back-to-top"><a class="top arrow" href="#top">
   <i class="fa fa-angle-up"></i> <span>Arriba</span></a>

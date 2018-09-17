@@ -34,7 +34,7 @@ body,
 .st-menu ul.menu li a:hover:before,
 .st-menu ul.menu li a.active:before,
 .st-menu ul.menu li a.active,
-.st-menu ul.menu li a:hover { opacity: 1; width: 100%; color: #84ba3f; }
+.st-menu ul.menu li a:hover { opacity: 1; width: 100%; color: #ff5500; }
 .slide-footer { padding: 30px; }
 .slide-footer .social ul li { display: inline-block; }
 .slide-footer .social ul li a { font-size: 20px; padding-right: 20px; }

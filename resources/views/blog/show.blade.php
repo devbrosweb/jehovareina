@@ -1,5 +1,5 @@
 
-@extends('frontend.app')
+@extends('layouts.frontend.app')
 
 
 @section('content')
@@ -23,9 +23,10 @@
               <div class="entry-meta mb-10">
                   <ul>
                       <li> <i class="fa fa-user-o"></i> <a href="#">{{ $post->author->name }}</a></li>
+                      <li><a href="#"><i class="fa fa-calendar-o"></i> {{ $post->date }}</li>
                       <li> <i class="fa fa-folder-open-o"></i> <a href="#"> {{ $post->category->title }} </li>
                       <li><a href="#"><i class="fa fa-comment-o"></i> 5</a></li>
-                      <li><a href="#"><i class="fa fa-calendar-o"></i> {{ $post->date }}</li>
+
                   </ul>
               </div>
               <div class="entry-content">
@@ -94,7 +95,8 @@
           <img src="/frontend/images/team/01.jpg" alt="">
           </div>
           <div class="port-post-info">
-          <h3 class="theme-color"> <a href="{{ route('blog.author', $post->author) }}"><span>Escrito por: </span>{{ $post->author->name }}</a> </h3>
+          <h3 class="theme-color"> <a href="{{ route('blog.author', $post->author) }}">
+            <span>Escrito por: </span>{{ $post->author->name }}</a> </h3>
           <div class="port-post-social float-right">
             <strong>Sigueme en:</strong>
             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -103,9 +105,9 @@
           </div>
           <p> <i class="fa fa-clone"></i>
             <span class="bagde badge-pill badge-primary text-white">
-              <?php $postCount = $post->author->posts->count(); ?>
+              <?php $postCount = $post->author->posts()->published()->count(); ?>
               {{ $postCount }}  {{ str_plural('articulo', $postCount) }}</span></p>
-          <p>Proin gravida nibh vel velit auctor aliquet lorem ipsum dolor sit amet of Lorem Ipsum. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat </p>
+            {!! $post->author->bio_html !!}
           </div>
           </div>
           <!-- ================================================ -->
@@ -115,7 +117,7 @@
 	      </div>
 
         {{-- sidebar --}}
-        @include('frontend.partials.sidebar')
+        @include('layouts.frontend.partials.sidebar')
     </div>
    </div>
   </section>

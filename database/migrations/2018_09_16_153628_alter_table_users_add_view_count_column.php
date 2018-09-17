@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterTableUsersAddSlugColumn extends Migration
+class AlterTableUsersAddViewCountColumn extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AlterTableUsersAddSlugColumn extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('slug');
-        });
+      Schema::table('posts', function (Blueprint $table) {
+          $table->integer('view_count')->default(0);
+      });
     }
 
     /**
@@ -25,8 +25,8 @@ class AlterTableUsersAddSlugColumn extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('slug');
-        });
+      Schema::table('posts', function (Blueprint $table) {
+          $table->dropColumn('view_count');
+      });
     }
 }

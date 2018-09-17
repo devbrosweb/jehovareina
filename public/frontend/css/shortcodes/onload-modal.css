@@ -20,7 +20,7 @@ NOTE: This file contains onload modal CSS.
 
 /*modal-subscribe*/
 .modal-subscribe { background: #ffffff;  margin: 0 auto; max-width: 500px; }
-.modal-subscribe .subscribe-icon { height: 300px; background: #84ba3f; display: block; overflow: hidden; }
+.modal-subscribe .subscribe-icon { height: 300px; background: #ff5500; display: block; overflow: hidden; }
 .modal-subscribe .subscribe-icon i { color: rgba(0, 0, 0, 0.2); font-size: 270px; transform: rotate(-30deg); -o-transform: rotate(-30deg); -ms-transform: rotate(-30deg); -moz-transform: rotate(-30deg); }
 .modal-subscribe .subscribe-content { padding: 30px; }
 .modal-subscribe .subscribe-content p { color: #323232; }

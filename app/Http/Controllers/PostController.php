@@ -23,37 +23,32 @@ class PostController extends Controller
                       ->latest()
                       ->published()
                       ->Paginate($this->limit);
-        return View('blog.index', compact('posts', 'categories'));
+        return View('blog.index', compact('posts'));
+
     }
 
     public function category(Category $category)
     {
       $categoryName = $category->title;
 
-      //get all posts by categoriy
-      // \DB::enableQueryLog();
       $posts = $category->posts()
                         ->with('author')
                         ->latest()
                         ->published()
                         ->paginate($this->limit);
-         return View('blog.index', compact('posts', 'categories', 'categoryName'));
-        // dd(\DB::getQueryLog());
+         return View('blog.index', compact('posts', 'categoryName'));
     }
 
     public function author(User $author){
 
       $authorName = $author->name;
 
-      //get all posts by user
-      // \DB::enableQueryLog();
       $posts = $author->posts()
                         ->with('category')
                         ->latest()
                         ->published()
                         ->paginate($this->limit);
          return View('blog.index', compact('posts', 'authorName'));
-        // dd(\DB::getQueryLog());
     }
 
     /**
@@ -85,7 +80,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-
+        $post->increment('view_count');
         return view('blog.show', compact('post'));
     }
 

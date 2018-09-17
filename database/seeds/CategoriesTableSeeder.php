@@ -11,9 +11,7 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Category::class)->make([
-          'title' => 'uncategorized'
-        ]);
+
         factory(App\Category::class)->create([
           'title' => 'Web Design'
         ]);
@@ -33,7 +31,7 @@ class CategoriesTableSeeder extends Seeder
         //update the posts database
         for ($post_id=1; $post_id <=10 ; $post_id++) {
           //take 1 of 5 category just created
-          $category_id = rand(2,6);
+          $category_id = rand(1,5);
           DB::table('posts')
               ->where('id', $post_id)
               ->update(['category_id' => $category_id]);

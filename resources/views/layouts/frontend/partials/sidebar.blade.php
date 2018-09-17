@@ -27,37 +27,23 @@
           </ul>
       </div>
         <div class="sidebar-widget">
-            <h6 class="mt-40 mb-20">Recent Posts </h6>
-            <div class="recent-post clearfix">
-              <div class="recent-post-image">
-                <img class="img-fluid" src="/frontend/images/blog/01.jpg" alt="">
+            <h6 class="mt-40 mb-20">Articulos Pupulares</h6>
+            @foreach ($pupularPosts as $pupularPost)
+              <div class="recent-post clearfix">
+                @if($pupularPost->image_url)
+                  <div class="recent-post-image">
+                    <img class="img-fluid" src="{{ $pupularPost->image_url }}" alt="">
+                  </div>
+                @endif
+               <div class="recent-post-info">
+                <a href="{{ route('blog.show', $pupularPost->slug) }}">{{ $pupularPost->title }}</a>
+                <span><i class="fa fa-calendar-o"></i>{{ $pupularPost->date }}</span>
+               </div>
               </div>
-             <div class="recent-post-info">
-              <a href="#">Nibh vel velit auctor aliquet. sem nibh Aenean</a>
-              <span><i class="fa fa-calendar-o"></i> September 30, 2018</span>
-             </div>
-            </div>
-            <div class="recent-post clearfix">
-              <div class="recent-post-image">
-                <img class="img-fluid" src="/frontend/images/blog/02.jpg" alt="">
-              </div>
-             <div class="recent-post-info">
-              <a href="#">Nibh vel velit auctor aliquet. sem nibh Aenean</a>
-              <span><i class="fa fa-calendar-o"></i> September 30, 2018</span>
-             </div>
-            </div>
-            <div class="recent-post clearfix">
-              <div class="recent-post-image">
-                <img class="img-fluid" src="/frontend/images/blog/03.jpg" alt="">
-              </div>
-             <div class="recent-post-info">
-              <a href="#">Nibh vel velit auctor aliquet. sem nibh Aenean</a>
-              <span><i class="fa fa-calendar-o"></i> September 30, 2018</span>
-             </div>
-            </div>
+            @endforeach
         </div>
         <div class="sidebar-widget clearfix">
-          <h6 class="mt-40 mb-20">Archives</h6>
+          <h6 class="mt-40 mb-20">Archivos</h6>
           <ul class="widget-categories">
             <li><a href="#"><i class="fa fa-angle-double-right"></i> December 2018</a></li>
             <li><a href="#"><i class="fa fa-angle-double-right"></i> November 2018</a></li>
@@ -67,7 +53,7 @@
           </ul>
       </div>
       <div class="sidebar-widget">
-       <h6 class="mt-40 mb-20">Tags</h6>
+       <h6 class="mt-40 mb-20">Etiquetas</h6>
         <div class="widget-tags">
          <ul>
           <li><a href="#">Bootstrap</a></li>

@@ -87,7 +87,7 @@ overflow: hidden !important; }
 		to { background-position: 30px 0; }
 	}
 	.mejs-controls .mejs-time-rail .mejs-time-loaded { background: #FFF; width: 0; }
-	.mejs-controls .mejs-time-rail .mejs-time-current { background: #fff; background: #84ba3f; width: 0; }
+	.mejs-controls .mejs-time-rail .mejs-time-current { background: #fff; background: #ff5500; width: 0; }
 	.mejs-controls .mejs-time-rail .mejs-time-handle { display: none; position: absolute; margin: 0; width: 10px; background: #fff; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; cursor: pointer; border: solid 2px #333; top: -2px; text-align: center; }
 	.mejs-controls .mejs-time-rail .mejs-time-float { position: absolute; display: none; background: #eee; width: 36px; height: 17px; border: solid 1px #333; top: -26px; margin-left: -18px; text-align: center; color: #111; }
 	.mejs-controls .mejs-time-rail .mejs-time-float-current { margin: 2px; width: 30px; display: block; text-align: center; left: 0; }
@@ -115,7 +115,7 @@ overflow: hidden !important; }
 	.mejs-controls .mejs-mute button { background-position: -16px -16px; }
 	.mejs-controls .mejs-unmute button { background-position: -16px 0; }
 	.mejs-controls .mejs-volume-button { position: relative; }
-	.mejs-controls .mejs-volume-button .mejs-volume-slider { display: none; height: 115px; width: 25px; background: url(../../images/background.html); background: #84ba3f; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; top: -115px; left: 0; z-index: 1; position: absolute; margin: 0; }
+	.mejs-controls .mejs-volume-button .mejs-volume-slider { display: none; height: 115px; width: 25px; background: url(../../images/background.html); background: #ff5500; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; top: -115px; left: 0; z-index: 1; position: absolute; margin: 0; }
 	.mejs-controls .mejs-volume-button:hover { -webkit-border-radius: 0 0 4px 4px; -moz-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px; }
 
 	/*
@@ -130,7 +130,7 @@ overflow: hidden !important; }
 	/* horizontal version */
 	.mejs-controls a.mejs-horizontal-volume-slider { height: 26px; width: 56px; position: relative; display: block; float: left; margin-top: 6px; vertical-align: middle; }
 	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total { position: absolute; left: 0; top: 11px; width: 50px; height: 8px; margin: 0; padding: 0; font-size: 1px; background: #fff; }
-	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current { position: absolute; left: 0; top: 11px; width: 50px; height: 8px; margin: 0; padding: 0; font-size: 1px; background: #84ba3f; }
+	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current { position: absolute; left: 0; top: 11px; width: 50px; height: 8px; margin: 0; padding: 0; font-size: 1px; background: #ff5500; }
 	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle { display: none; }
 
 	/* End: Mute/Volume */

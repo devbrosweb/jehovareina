@@ -25,6 +25,7 @@ class Post extends Model
     public function getBodyHtmlAttribute(){
       return $this->body ? Markdown::convertToHtml(e($this->body)) : null;
     }
+
     public function getExcerptHtmlAttribute(){
       return $this->excerpt ? Markdown::convertToHtml(e($this->excerpt)) : null;
     }
@@ -32,6 +33,11 @@ class Post extends Model
     public function scopePublished($query){
       return $query->where('published_at', '<=', Carbon::now());
     }
+
+    public function scopePopular($query){
+      return $query->orderBy('view_count', 'desc');
+    }
+
     public function getImageUrlAttribute(){
       $imageUrl = "";
 

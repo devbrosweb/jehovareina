@@ -1,4 +1,4 @@
-@extends('frontend.app')
+@extends('layouts.frontend.app')
 @section('content')
 <!--=================================
    Blog-->
@@ -38,13 +38,13 @@
                     <div class="entry-meta mb-10">
                        <ul>
                           <li> <i class="fa fa-user-o"></i> <a href="{{ route('blog.author', $post->author->slug) }}">{{ $post->author->name }}</a></li>
+                          <li><a href="#"><i class="fa fa-calendar-o"></i> {{ $post->date }}</a></li>
                           <li>
                              <i class="fa fa-folder-open-o"></i>
-                             <a href="{{ route('blog.category', $post->category->slug)}}">
+                             <a href="{{ route('blog.category', $post->category->slug) }}">
                                 {{ $post->category->title }}
                           </li>
                           <li><a href="#"><i class="fa fa-comment-o"></i> 5</a></li>
-                          <li><a href="#"><i class="fa fa-calendar-o"></i> {{ $post->date }}</a></li>
                        </ul>
                     </div>
                     <div class="entry-content">
@@ -89,7 +89,7 @@
             --}}
          </div>
          {{-- sidebar --}}
-         @include('frontend.partials.sidebar')
+         @include('layouts.frontend.partials.sidebar')
       </div>
    </div>
 </section>
